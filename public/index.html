@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Publication Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="logo-container">
+      <img
+        src="./images/logos/logo1.png"
+        alt="Secondary Logo"
+        class="secondary-logo"
+      />
+      <img
+        src="./images/logos/textBanner.png"
+        alt="Banner Logo"
+        class="main-logo"
+      />
+    </div>
+
+    <header>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Publications</a></li>
+          <li class="dropdown-nav-item">
+            <a
+              href="#"
+              class="dropdown-trigger"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Downloads
+              <span class="dropdown-arrow"
+                ><i class="fas fa-chevron-down"></i></span
+            ></a>
+            <div class="dropdown-menu" role="menu">
+              <a href="#">Download 1</a>
+              <a href="#">Download 2</a>
+              <a href="#">Download 3</a>
+            </div>
+          </li>
+          <li class="dropdown-nav-item">
+            <a
+              href="#"
+              class="dropdown-trigger"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Quick Links
+              <span class="dropdown-arrow"
+                ><i class="fas fa-chevron-down"></i></span
+            ></a>
+            <div class="dropdown-menu" role="menu">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+          <li><a href="#">རྫོང་ཁ།</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Advanced Search Dialog -->
+    <div
+      id="advanced-search-dialog"
+      class="dialog-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="advanced-search-heading"
+      tabindex="0"
+    >
+      <div class="dialog-content" tabindex="0">
+        <h2 id="advanced-search-heading">Advanced Search</h2>
+        <div class="search-field">
+          <label for="isbn-search">ISBN</label>
+          <input
+            type="text"
+            id="isbn-search"
+            placeholder="Enter your search term"
+          />
+          <select id="isbn-operator">
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+            <option value="NOT">NOT</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="title-search">Title</label>
+          <input
+            type="text"
+            id="title-search"
+            placeholder="Enter your search term"
+          />
+          <select id="title-operator">
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+            <option value="NOT">NOT</option>
+          </select>
+        </div>
+        <div class="search-field year-range">
+          <label for="year-from">Year</label>
+          <div class="year-inputs">
+            <input type="number" id="year-from" placeholder="From" />
+            <span>to</span>
+            <input type="number" id="year-to" placeholder="To" />
+          </div>
+        </div>
+        <div class="dialog-buttons">
+          <button id="reset-search" class="reset-btn">Reset</button>
+
+          <div>
+            <button id="advanced-search-submit" class="search-submit-btn">
+              Search
+            </button>
+            <button id="close-dialog" class="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-section">
+      <div
+        class="hamburger-menu"
+        role="button"
+        tabindex="0"
+        aria-label="Toggle navigation menu"
+      >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search publications..."
+          aria-label="Search publications"
+        />
+        <button id="search-button" class="search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button
+          id="advanced-search-button"
+          class="advanced-search-btn"
+          aria-label="Open advanced search dialog"
+        >
+          <i class="fas"></i>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <section class="publications-container">
+        <h1 tabindex="0">Recent Publications</h1>
+
+        <div
+          class="publication-card"
+          tabindex="0"
+          data-title="English-Dzongkha Pocket Dictionary"
+          data-author="Author Name, Co-Author Name"
+          data-year="2025"
+          data-isbn="978-3-16-148410-0"
+        >
+          <div class="thumbnail">
+            <img
+              src="./images/publications/dictionary.jpg"
+              alt="Publication 1"
+            />
+          </div>
+          <div class="content">
+            <div class="action-buttons">
+              <button class="btn-download" aria-label="Download publication">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="btn-share" aria-label="Share publication">
+                <i class="fas fa-share-alt"></i>
+              </button>
+            </div>
+            <h2 tabindex="0">English-Dzongkha Pocket Dictionary</h2>
+            <p class="publication-detail" tabindex="0">
+              <strong>Summary:</strong> Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt,
+              nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>ISBN Number:</strong> 978-0-306-40615-7
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>Publication Year:</strong> 2024
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>Number of Pages:</strong> 999
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="publication-card"
+          tabindex="0"
+          data-title="Legal Terminology"
+          data-author="Author Name, Co-Author Name"
+          data-year="2024"
+          data-isbn="978-1-4028-9462-6"
+        >
+          <div class="thumbnail">
+            <img
+              src="./images/publications/bilingual.jpg"
+              alt="Publication 2"
+            />
+          </div>
+          <div class="content">
+            <div class="action-buttons">
+              <button class="btn-download" aria-label="Download publication">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="btn-share" aria-label="Share publication">
+                <i class="fas fa-share-alt"></i>
+              </button>
+            </div>
+            <h2 tabindex="0">Bilingual Cultural Terminology of Bhutan</h2>
+            <p class="publication-detail" tabindex="0">
+              <strong>Summary:</strong> Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt,
+              nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>ISBN Number:</strong> 978-0-306-40615-7
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>Publication Year:</strong> 2023
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>Number of Pages:</strong> 999
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="publication-card"
+          tabindex="0"
+          data-title="Legal Terminology"
+          data-author="Author Name, Co-Author Name"
+          data-year="2023"
+          data-isbn="978-0-306-40615-7"
+        >
+          <div class="thumbnail">
+            <img
+              src="./images/publications/constitution.jpg"
+              alt="Publication 3"
+            />
+          </div>
+          <div class="content">
+            <div class="action-buttons">
+              <button class="btn-download" aria-label="Download publication">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="btn-share" aria-label="Share publication">
+                <i class="fas fa-share-alt"></i>
+              </button>
+            </div>
+            <h2 tabindex="0">Legal Terminology</h2>
+            <p class="publication-detail" tabindex="0">
+              <strong>Summary:</strong> Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt,
+              nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>ISBN Number:</strong> 978-0-306-40615-7
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>Publication Year:</strong> 2017
+            </p>
+            <p class="publication-detail" tabindex="0">
+              <strong>Number of Pages:</strong> 999
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Publication Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelector(".nav-links");
+        const searchInput = document.getElementById("search-input");
+        const searchButton = document.getElementById("search-button");
+        const advancedSearchButton = document.getElementById(
+          "advanced-search-button"
+        );
+        const advancedSearchDialog = document.getElementById(
+          "advanced-search-dialog"
+        );
+        const closeDialogButton = document.getElementById("close-dialog");
+        const resetSearchButton = document.getElementById("reset-search");
+        const advancedSearchSubmit = document.getElementById(
+          "advanced-search-submit"
+        );
+        const publicationCards = document.querySelectorAll(".publication-card");
+
+        // Handle window resize
+        window.addEventListener("resize", () => {
+          if (
+            window.innerWidth > 768 &&
+            navLinks.classList.contains("active")
+          ) {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("open");
+            document.body.classList.remove("menu-open");
+          }
+        });
+
+        // Basic search functionality
+        function performSearch(searchTerm) {
+          searchTerm = searchTerm.toLowerCase().trim();
+
+          publicationCards.forEach((card) => {
+            const title = card.getAttribute("data-title").toLowerCase();
+            const author = card.getAttribute("data-author").toLowerCase();
+            const isbn = card.getAttribute("data-isbn").toLowerCase();
+
+            if (
+              searchTerm === "" ||
+              title.includes(searchTerm) ||
+              author.includes(searchTerm) ||
+              isbn.includes(searchTerm)
+            ) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        }
+
+        // Search on button click
+        searchButton.addEventListener("click", () => {
+          performSearch(searchInput.value);
+        });
+
+        // Search on Enter key press
+        searchInput.addEventListener("keyup", (e) => {
+          if (e.key === "Enter") {
+            performSearch(searchInput.value);
+          }
+        });
+
+        // Advanced search dialog
+        advancedSearchButton.addEventListener("click", () => {
+          advancedSearchDialog.style.display = "flex";
+          document.body.style.overflow = "hidden"; // Prevent scrolling when dialog is open
+        });
+
+        closeDialogButton.addEventListener("click", () => {
+          advancedSearchDialog.style.display = "none";
+          document.body.style.overflow = "auto"; // Restore scrolling
+        });
+
+        // Click outside to close
+        advancedSearchDialog.addEventListener("click", (e) => {
+          if (e.target === advancedSearchDialog) {
+            advancedSearchDialog.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+
+        // Reset advanced search form
+        resetSearchButton.addEventListener("click", () => {
+          document.getElementById("isbn-search").value = "";
+          document.getElementById("title-search").value = "";
+          document.getElementById("year-from").value = "";
+          document.getElementById("year-to").value = "";
+          document.getElementById("isbn-operator").value = "AND";
+          document.getElementById("title-operator").value = "AND";
+        });
+
+        // Advanced search submit
+        advancedSearchSubmit.addEventListener("click", () => {
+          const isbnSearch = document
+            .getElementById("isbn-search")
+            .value.toLowerCase();
+          const titleSearch = document
+            .getElementById("title-search")
+            .value.toLowerCase();
+          const yearFrom =
+            parseInt(document.getElementById("year-from").value) || 0;
+          const yearTo =
+            parseInt(document.getElementById("year-to").value) || 9999;
+
+          publicationCards.forEach((card) => {
+            const title = card.getAttribute("data-title").toLowerCase();
+            const isbn = card.getAttribute("data-isbn").toLowerCase();
+            const year = parseInt(card.getAttribute("data-year"));
+
+            let isbnMatch = isbnSearch === "" || isbn.includes(isbnSearch);
+            let titleMatch = titleSearch === "" || title.includes(titleSearch);
+            let yearMatch = year >= yearFrom && year <= yearTo;
+
+            if (isbnMatch && titleMatch && yearMatch) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          advancedSearchDialog.style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+        // Share button functionality
+        const shareButtons = document.querySelectorAll(".btn-share");
+        shareButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const publicationTitle =
+              this.closest(".content").querySelector("h2").textContent;
+            alert(`Sharing "${publicationTitle}" on social media.`);
+          });
+        });
+
+        // Save button functionality
+        const saveButtons = document.querySelectorAll(".btn-save");
+        saveButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            this.classList.toggle("saved");
+            const publicationTitle =
+              this.closest(".content").querySelector("h2").textContent;
+            const isSaved = this.classList.contains("saved");
+
+            if (isSaved) {
+              this.innerHTML = '<i class="fas fa-bookmark"></i>';
+              alert(`"${publicationTitle}" saved to your bookmarks.`);
+            } else {
+              this.innerHTML = '<i class="far fa-bookmark"></i>';
+              alert(`"${publicationTitle}" removed from your bookmarks.`);
+            }
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all dropdown triggers
+        const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
+
+        // Add click event listener to each trigger
+        dropdownTriggers.forEach((trigger) => {
+          trigger.addEventListener("click", function (e) {
+            // Check if we're in mobile view
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              // Toggle dropdown-active class on parent element (the dropdown-nav-item)
+              this.parentElement.classList.toggle("dropdown-active");
+            }
+          });
+        });
+
+        // Existing hamburger menu toggle code (if you have any)
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburgerMenu.addEventListener("click", function () {
+          this.classList.toggle("open");
+          navLinks.classList.toggle("active");
+          document.body.classList.toggle("menu-open");
+        });
+      });
+    </script>
+  </body>
+</html>
